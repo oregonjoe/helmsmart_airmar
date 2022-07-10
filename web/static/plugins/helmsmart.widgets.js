@@ -270,7 +270,7 @@
 				unitsElement.hide();
 			}
 
-			var valueFontSize = 38;
+			var valueFontSize = 30;
 			if(newSettings.size == "small")
 			{
 				valueFontSize = 20;
