@@ -201,6 +201,10 @@
 
 		function updateValueSizing()
 		{
+			
+			valueElement.css("fill", "#4d4d4d");
+			
+			
 			if(!_.isUndefined(currentSettings.units) && currentSettings.units != "") // If we're displaying our units
 			{
 				valueElement.css("max-width", (displayElement.innerWidth() - unitsElement.outerWidth(true)) + "px");
@@ -230,6 +234,9 @@
 			var shouldDisplayTitle = (!_.isUndefined(newSettings.title) && newSettings.title != "");
 			var shouldDisplayUnits = (!_.isUndefined(newSettings.units) && newSettings.units != "");
 
+			
+			
+			
 			if(newSettings.sparkline)
 			{
 				sparklineElement.attr("style", null);
