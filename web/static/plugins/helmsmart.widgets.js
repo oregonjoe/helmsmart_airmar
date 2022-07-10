@@ -270,7 +270,7 @@
 				unitsElement.hide();
 			}
 
-			var valueFontSize = 40;
+			var valueFontSize = 38;
 			if(newSettings.size == "small")
 			{
 				valueFontSize = 20;
@@ -298,6 +298,7 @@
 			//valueElement.css({"font-size": valueFontSize + "px; font-weight; bold"});
 			//valueElement.css("font-weight", "bold");
 			//valueElement.css({"font-weight:bold"});
+			valueElement.css("font-weight", "bold");
 			
 			
 			updateValueSizing();
