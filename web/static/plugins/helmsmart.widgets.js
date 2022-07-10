@@ -271,9 +271,9 @@
 			}
 
 			var valueFontSize = 28;
-			if(newSettings.size == "normal")
+			if(newSettings.size == "regular")
 			{
-				valueFontSize = 30;
+				valueFontSize = 32;
 				valueElement.css({"font-size": valueFontSize + "px"});
 
 				valueElement.css("font-weight", "100");
