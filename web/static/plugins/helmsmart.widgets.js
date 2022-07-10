@@ -3159,6 +3159,8 @@
 		var myLatlng;
 		var myOldLatlng;
 		
+		var bounds;
+		
 		
 		var newpoly = new Array();
 		var mypolyOptions = {
@@ -3218,7 +3220,7 @@
 				}
 				
 				
-				var bounds = new google.maps.LatLngBounds();
+				 bounds = new google.maps.LatLngBounds();
 	//var infowindow = new google.maps.InfoWindow();
 				for (i = 0; i < MAX_NUM_ZONES; i++) {
 					  //extend the bounds to include each marker's position
@@ -3233,7 +3235,8 @@
 				}
 				
                // map.panTo(newLatLon);
-				
+			   
+			   
 			   try{
 					var zoomLevel = _.isUndefined(currentSettings.mapzoom) ? 0: parseInt(currentSettings.mapzoom);
 				}
@@ -3292,6 +3295,21 @@
 					//map.setZoom(parseInt(zoomLevel));
 				}
 				
+				/*
+				//now fit the map to the newly inclusive bounds
+				try{
+					var myzoom = map.getZoom();
+					map.fitBounds(bounds);
+				
+					map.setZoom(myzoom);
+				}
+				catch(err) {
+					console.log("error object toString():");
+					console.log("\t" + err.toString());
+					
+					map.setZoom(8);
+				};
+				*/
 				
 				//newpoly[i] = new google.maps.Polyline(mypolyOptions);
 				
@@ -3691,10 +3709,11 @@
         // to the map type control.
         map = new google.maps.Map(element, {
           center: {lat: -124.26833, lng: 42.05038},
-                    zoom: 8,
+          zoom: 8,
 
 			gestureHandling: "cooperative",
 			zoomControl: true,
+			
           mapTypeControlOptions: {
             mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
                     'styled_map']
@@ -3711,6 +3730,22 @@
 				
 			//}
 
+			/*
+							try {	
+					google.maps.event.addDomListener(element, 'click', function (e) {
+                   map.fitBounds(bounds);
+                });
+				}
+				catch(err) {
+				console.log("error object toString():");
+				console.log("\t" + err.toString());
+				};
+			
+			*/
+			
+			
+			
+			
                 google.maps.event.addDomListener(element, 'mouseenter', function (e) {
                     e.cancelBubble = true;
                     if (!map.hover) {
@@ -3899,7 +3934,8 @@
 				updatePositions(2);
 		
 		}
-			else if (settingName == "zone3") {
+		
+		else if (settingName == "zone3") {
 				 position = newValue[0];
 				 currentPosition.lon = position.lng;
 				 currentPosition.lat = position.lat;
@@ -3945,7 +3981,6 @@
 		
 		
 		
-		
 		};
 
         this.onDispose = function () {
@@ -3953,6 +3988,8 @@
 
         this.getHeight = function () {
            return 4;
+			//return _.isUndefined(currentSettings.blocks) ? 4: parseInt(currentSettings.blocks);
+			
 			//return _.isUndefined(currentSettings.blocks) ? 4: currentSettings.blocks;
 		    //return currentSettings.blocks;
        
@@ -4043,7 +4080,7 @@
                     }
                 ]
             },
-			{
+				{
                 name: "mapzoom",
                 display_name: "Map Zoom",
                 type: "option",
@@ -4357,6 +4394,7 @@
             newInstanceCallback(new googleMapWidget(settings));
         }
     });
+
 
     var pictureWidget = function(settings)
     {
