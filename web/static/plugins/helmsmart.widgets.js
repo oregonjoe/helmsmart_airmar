@@ -276,7 +276,7 @@
 				valueFontSize = 32;
 				valueElement.css({"font-size": valueFontSize + "px"});
 
-				//valueElement.css("font-weight", "100");
+				valueElement.css("font-weight", "normal");
 			}
 			if(newSettings.size == "small")
 			{
