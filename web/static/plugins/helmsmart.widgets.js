@@ -151,7 +151,7 @@
 	var valueStyle = freeboard.getStyleString("values");
 
 	freeboard.addStyle('.widget-big-text', valueStyle + "font-size:75px;");
-	freeboard.addStyle('.widget-huge-text', valueStyle + "font-size:150px;");
+	freeboard.addStyle('.widget-huge-text', valueStyle + "font-size:125px;");
 	
 	freeboard.addStyle('.pwidget-big-text', valueStyle + "font-size:75px;");
 
