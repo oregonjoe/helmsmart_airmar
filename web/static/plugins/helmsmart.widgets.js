@@ -357,7 +357,7 @@
 					
                     easeTransitionText(value, valueElement, 500);
                 }
-                else {
+                else { 
                     valueElement.text(value);
 					unitsElement.css({"color": "blue !important"});
 					valueElement.css({"color": "blue !important"});
@@ -392,7 +392,7 @@
 		description: "Text Box - uses HelmSmart Data source to grab selected array span - plots first point in array",
         "external_scripts": [
             //"plugins/thirdparty/jquery.sparkline.min.js"
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/jquery.sparkline.min.js"
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/jquery.sparkline.min.js"
         ],
         settings: [
             {
@@ -676,8 +676,8 @@
         "external_scripts": [
             //"plugins/thirdparty/raphael.2.1.0.min.js",
             //"plugins/thirdparty/justgage.1.0.1.js"
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/raphael.2.1.4.min.js",
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/justgage.1.2.9.js"
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/raphael.2.1.4.min.js",
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/justgage.1.2.9.js"
         ],
         settings: [
             {
@@ -1107,8 +1107,8 @@
         "external_scripts": [
             //"plugins/thirdparty/raphael.2.1.0.min.js",
             //"plugins/thirdparty/justgage.1.0.1.js"
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/raphael.2.1.4.min.js",
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/justgage.1.2.9.js"
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/raphael.2.1.4.min.js",
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/justgage.1.2.9.js"
         ],
         settings: [
             {
@@ -1459,9 +1459,9 @@
 		description: "Historical Sparkline- uses HelmSmart Data source to grab selected array span - plots all points in array",
         "external_scripts": [
             //"plugins/thirdparty/jquery.sparkline.min.js"
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/jquery.sparkline.min.js"
-			//"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/raphael.2.1.0.min.js",
-			//"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/justgage.1.0.1.js"
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/jquery.sparkline.min.js"
+			//"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/raphael.2.1.0.min.js",
+			//"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/justgage.1.0.1.js"
         ],
         settings: [
             {
@@ -1595,9 +1595,9 @@
 		description: "Radial Pointer Gauge - uses HelmSmart Data source to grab selected array span - plots only first point in array",
         "external_scripts": [
             //"plugins/thirdparty/raphael.2.1.0.min.js"
-						//"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/jquery.sparkline.min.js"
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/raphael.2.1.0.min.js",
-			//"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/justgage.1.0.1.js"
+						//"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/jquery.sparkline.min.js"
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/raphael.2.1.0.min.js",
+			//"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/justgage.1.0.1.js"
         ],
         settings: [
             {
@@ -1887,8 +1887,8 @@
         type_name: "vertical-linear-gauge",
         display_name: "HelmSmart Array Vertical Gauge",
         "external_scripts": [
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/raphael.2.1.0.min.js",
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/colormix.2.0.0.min.js"
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/raphael.2.1.0.min.js",
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/colormix.2.0.0.min.js"
             //"plugins/thirdparty/raphael.2.1.0-custom.js",
             //"plugins/thirdparty/colormix.2.0.0.min.js"
         ],
@@ -2288,8 +2288,8 @@
         type_name: "horizontal-linear-gauge",
         display_name: "HelmSmart Horizontal Gauge",
         "external_scripts": [
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/raphael.2.1.0.min.js",
-			"https://helmsmart-weatherstation.herokuapp.com/static/plugins/thirdparty/colormix.2.0.0.min.js"
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/raphael.2.1.0.min.js",
+			"https://helmsmart-airmar.herokuapp.com/static/plugins/thirdparty/colormix.2.0.0.min.js"
         ],
         settings: [
             {
@@ -2565,7 +2565,7 @@
 				}
 			
 
-				var url = "https://helmsmart-weatherstation.herokuapp.com/setswitchapi";
+				var url = "https://helmsmart-airmar.herokuapp.com/setswitchapi";
 				url = url + "?deviceapikey=" + currentSettings.apikey;
 
 				url = url + "&instance=" + switchInstance ;
@@ -2582,7 +2582,7 @@
 	
 			
 
-				var url = "https://helmsmart-weatherstation.herokuapp.com/setdimmerapi";
+				var url = "https://helmsmart-airmar.herokuapp.com/setdimmerapi";
 				url = url + "?deviceapikey=" + currentSettings.apikey;
 
 				url = url + "&instance=" + switchInstance ;
@@ -4257,7 +4257,7 @@
 				
 				index = Math.floor(index/10);
 			
-                imageURL = "https://helmsmart-weatherstation.herokuapp.com/static/plugins/images/Large_Compass_Rotating_Black_" + index +".jpg";
+                imageURL = "https://helmsmart-airmar.herokuapp.com/static/plugins/images/Large_Compass_Rotating_Black_" + index +".jpg";
             }
 
             updateImage();
