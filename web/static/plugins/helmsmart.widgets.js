@@ -271,9 +271,19 @@
 			}
 
 			var valueFontSize = 28;
+			if(newSettings.size == "normal")
+			{
+				valueFontSize = 30;
+				valueElement.css({"font-size": valueFontSize + "px"});
+
+				valueElement.css("font-weight", "100");
+			}
 			if(newSettings.size == "small")
 			{
 				valueFontSize = 18;
+				valueElement.css({"font-size": valueFontSize + "px"});
+
+				valueElement.css("font-weight", "100");
 			}
 			if(newSettings.size == "big")
 			{
@@ -283,6 +293,10 @@
 				{
 					valueFontSize = 60;
 				}
+				
+				valueElement.css({"font-size": valueFontSize + "px"});
+
+				valueElement.css("font-weight", "160");
 			}
 			else if(newSettings.size == "huge")
 			{
@@ -292,13 +306,17 @@
 				{
 					valueFontSize = 100;
 				}
+				
+				valueElement.css({"font-size": valueFontSize + "px"});
+
+				valueElement.css("font-weight", "200");
 			}
 
-			valueElement.css({"font-size": valueFontSize + "px"});
+			//valueElement.css({"font-size": valueFontSize + "px"});
 			//valueElement.css({"font-size": valueFontSize + "px; font-weight; bold"});
 			//valueElement.css("font-weight", "bold");
 			//valueElement.css({"font-weight:bold"});
-			valueElement.css("font-weight", "160");
+			//valueElement.css("font-weight", "160");
 			
 			
 			updateValueSizing();
