@@ -7,7 +7,7 @@
 // │ Licensed under the MIT license.                                    │ \\
 // └────────────────────────────────────────────────────────────────────┘ \\
 
-	var MAX_NUM_ZONES = 3;
+	var MAX_NUM_ZONES = 6;
 
 (function () {
 	var SPARKLINE_HISTORY_LENGTH = 100;
@@ -3234,8 +3234,63 @@
 				
                // map.panTo(newLatLon);
 				
-				//now fit the map to the newly inclusive bounds
-				map.fitBounds(bounds);
+			   try{
+					var zoomLevel = _.isUndefined(currentSettings.mapzoom) ? 0: parseInt(currentSettings.mapzoom);
+				}
+				catch(err)
+				{
+					var zoomLevel = 0;
+				}
+				   
+			   if (zoomLevel == 0)
+			   {
+			   
+				   // Ensure the map does not get too zoomed out when fitting the bounds.
+					map.setOptions({maxZoom: 14});
+					// Clear the minZoom only after the map fits the bounds (note that
+					// fitBounds() is asynchronous). The 'idle' event fires when the map
+					// becomes idle after panning or zooming.
+					google.maps.event.addListenerOnce(map, 'idle', function() {
+					  map.setOptions({maxZoom: null});
+					});
+				   
+					map.fitBounds(bounds);
+				}
+				else if (zoomLevel == 255)
+				{
+					
+					map.setOptions({
+					   panControl: true,
+					   zoomControl: true
+					});
+					
+					var myzoomLevel = map.getZoom();
+					var myCenter = map.getCenter();
+					
+					//google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
+					//  map.setZoom(parseInt(myzoomLevel));
+					//  map.setCenter(myCenter);
+					//});
+					
+					
+					google.maps.event.addListenerOnce(map, 'idle', function() {
+					  map.setZoom(parseInt(myzoomLevel));
+					  map.setCenter(myCenter);
+					});
+					
+					map.fitBounds(bounds);
+					//map.setZoom(parseInt(zoomLevel));
+				}
+				else{
+					
+					
+					google.maps.event.addListenerOnce(map, 'bounds_changed', function() {
+					  map.setZoom(parseInt(zoomLevel));
+					});
+					
+					map.fitBounds(bounds);
+					//map.setZoom(parseInt(zoomLevel));
+				}
 				
 				
 				//newpoly[i] = new google.maps.Polyline(mypolyOptions);
@@ -3636,7 +3691,10 @@
         // to the map type control.
         map = new google.maps.Map(element, {
           center: {lat: -124.26833, lng: 42.05038},
-          zoom: 11,
+                    zoom: 8,
+
+			gestureHandling: "cooperative",
+			zoomControl: true,
           mapTypeControlOptions: {
             mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain',
                     'styled_map']
@@ -3841,6 +3899,53 @@
 				updatePositions(2);
 		
 		}
+			else if (settingName == "zone3") {
+				 position = newValue[0];
+				 currentPosition.lon = position.lng;
+				 currentPosition.lat = position.lat;
+		
+				try {
+				 currentWind.speed = position.truewindspeed;
+				 currentWind.direction = position.truewinddir;
+				}
+				catch(err) { };
+		
+				updatePositions(3);
+		
+		}
+		else if (settingName == "zone4") {
+				 position = newValue[0];
+				 currentPosition.lon = position.lng;
+				 currentPosition.lat = position.lat;
+		
+				try {
+				 currentWind.speed = position.truewindspeed;
+				 currentWind.direction = position.truewinddir;
+				}
+				catch(err) { };
+		
+				updatePositions(4);
+		
+		}
+		else if (settingName == "zone5") {
+				 position = newValue[0];
+				 currentPosition.lon = position.lng;
+				 currentPosition.lat = position.lat;
+		
+				try {
+				 currentWind.speed = position.truewindspeed;
+				 currentWind.direction = position.truewinddir;
+				}
+				catch(err) { };
+		
+				updatePositions(5);
+		
+		}
+		
+		
+		
+		
+		
 		};
 
         this.onDispose = function () {
@@ -3938,7 +4043,38 @@
                     }
                 ]
             },
-			
+			{
+                name: "mapzoom",
+                display_name: "Map Zoom",
+                type: "option",
+				default_value: 0,
+                options: [
+                    {
+                        name: "Auto Zoom",
+                        value: "0"
+                    },
+					{
+                        name: "small",
+                        value: "4"
+                    },
+                    {
+                        name: "medium",
+                        value: "8"
+                    },
+					{
+                        name: "large",
+                        value: "12"
+                    },
+					{
+                        name: "Huge",
+                        value: "16"
+                    },
+					{
+                        name: "Manual",
+                        value: "255"
+                    }
+                ]
+            },
 			// Java-0, Light Green-1,Bittersweet-2, Wild Blue Yonder-3, Pale Turquoise-4,Razzmatazz-5, Plum-6, Apple-7, Valencia-8, Neptune-9, Saffron-10, Default-11
 			{
 			"name": "trailColor",
