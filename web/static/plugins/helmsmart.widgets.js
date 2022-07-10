@@ -286,11 +286,11 @@
 			}
 			else if(newSettings.size == "huge")
 			{
-				valueFontSize = 150;
+				valueFontSize = 125;
 
 				if(newSettings.sparkline)
 				{
-					valueFontSize = 125;
+					valueFontSize = 100;
 				}
 			}
 
