@@ -252,15 +252,15 @@
 					}
 				},
 				xAxis: {
-					gridLineColor: '#CCCCCC',
+					gridLineColor: '#d8d8d8',
 					labels: {
 						style: {
 							color: '#E0E0E3'
 						}
 					},
-					lineColor: '#CCCCCC',
-					minorGridLineColor: '#505053',
-					tickColor: '#CCCCCC',
+					lineColor: '#d8d8d8',
+					minorGridLineColor: '#DDDDDD',
+					tickColor: '#d8d8d8',
 					title: {
 						style: {
 							color: '#A0A0A3'
@@ -269,15 +269,15 @@
 					}
 				},
 				yAxis: {
-					gridLineColor: '#CCCCCC',
+					gridLineColor: '#d8d8d8',
 					labels: {
 						style: {
 							color: '#E0E0E3'
 						}
 					},
-					lineColor: '#CCCCCC',
-					minorGridLineColor: '#505053',
-					tickColor: '#CCCCCC',
+					lineColor: '#d8d8d8',
+					minorGridLineColor: '#DDDDDD',
+					tickColor: '#d8d8d8',
 					tickWidth: 1,
 					title: {
 						style: {
@@ -302,7 +302,7 @@
 					},
 					 
 					boxplot: {
-						fillColor: '#505053'
+						fillColor: '#DDDDDD'
 					},
 					candlestick: {
 						lineColor: 'white'
@@ -330,7 +330,7 @@
 				},
 				labels: {
 					style: {
-						color: '#CCCCCC'
+						color: '#d8d8d8'
 					}
 				},
 
@@ -347,7 +347,7 @@
 					buttonOptions: {
 						symbolStroke: '#DDDDDD',
 						theme: {
-							fill: '#505053'
+							fill: '#DDDDDD'
 						}
 					}
 				},
@@ -355,14 +355,14 @@
 				// scroll charts
 				rangeSelector: {
 					buttonTheme: {
-						fill: '#505053',
+						fill: '#DDDDDD',
 						stroke: '#000000',
 						style: {
 							color: '#CCC'
 						},
 						states: {
 							hover: {
-								fill: '#CCCCCC',
+								fill: '#d8d8d8',
 								stroke: '#000000',
 								style: {
 									color: 'white'
@@ -377,7 +377,7 @@
 							}
 						}
 					},
-					inputBoxBorderColor: '#505053',
+					inputBoxBorderColor: '#DDDDDD',
 					inputStyle: {
 						backgroundColor: '#333',
 						color: 'silver'
@@ -399,7 +399,7 @@
 						lineColor: '#A6C7ED'
 					},
 					xAxis: {
-						gridLineColor: '#505053'
+						gridLineColor: '#DDDDDD'
 					}
 				},
 
@@ -416,7 +416,7 @@
 
 				// special colors for some of the
 				legendBackgroundColor: 'rgba(0, 0, 0, 0.5)',
-				background2: '#505053',
+				background2: '#DDDDDD',
 				dataLabelsColor: '#B0B0B3',
 				textColor: '#C0C0C0',
 				contrastTextColor: '#F0F0F3',
