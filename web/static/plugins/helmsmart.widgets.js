@@ -294,8 +294,9 @@
 				}
 			}
 
-			valueElement.css({"font-size": valueFontSize + "px"});
-
+			valueElement.css({"font-size": valueFontSize + "px; "});
+			valueElement.css("font-weight", "bold");
+			
 			updateValueSizing();
         }
 
