@@ -202,7 +202,7 @@
 		function updateValueSizing()
 		{
 			
-			valueElement.css("fill", "#4d4d4d");
+			valueElement.css("color", "#4d4d4d");
 			
 			
 			if(!_.isUndefined(currentSettings.units) && currentSettings.units != "") // If we're displaying our units
