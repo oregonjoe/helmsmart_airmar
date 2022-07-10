@@ -298,7 +298,7 @@
 			//valueElement.css({"font-size": valueFontSize + "px; font-weight; bold"});
 			//valueElement.css("font-weight", "bold");
 			//valueElement.css({"font-weight:bold"});
-			valueElement.css("font-weight", "bold");
+			valueElement.css("font-weight", "200");
 			
 			
 			updateValueSizing();
