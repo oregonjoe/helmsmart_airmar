@@ -252,15 +252,15 @@
 					}
 				},
 				xAxis: {
-					gridLineColor: '#707073',
+					gridLineColor: '#CCCCCC',
 					labels: {
 						style: {
 							color: '#E0E0E3'
 						}
 					},
-					lineColor: '#707073',
+					lineColor: '#CCCCCC',
 					minorGridLineColor: '#505053',
-					tickColor: '#707073',
+					tickColor: '#CCCCCC',
 					title: {
 						style: {
 							color: '#A0A0A3'
@@ -269,15 +269,15 @@
 					}
 				},
 				yAxis: {
-					gridLineColor: '#707073',
+					gridLineColor: '#CCCCCC',
 					labels: {
 						style: {
 							color: '#E0E0E3'
 						}
 					},
-					lineColor: '#707073',
+					lineColor: '#CCCCCC',
 					minorGridLineColor: '#505053',
-					tickColor: '#707073',
+					tickColor: '#CCCCCC',
 					tickWidth: 1,
 					title: {
 						style: {
@@ -330,7 +330,7 @@
 				},
 				labels: {
 					style: {
-						color: '#707073'
+						color: '#CCCCCC'
 					}
 				},
 
@@ -362,7 +362,7 @@
 						},
 						states: {
 							hover: {
-								fill: '#707073',
+								fill: '#CCCCCC',
 								stroke: '#000000',
 								style: {
 									color: 'white'
