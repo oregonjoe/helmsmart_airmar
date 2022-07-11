@@ -255,7 +255,7 @@
 					gridLineColor: '#d8d8d8',
 					labels: {
 						style: {
-							color: '#E0E0E3'
+							color: '#888888'
 						}
 					},
 					lineColor: '#d8d8d8',
@@ -263,7 +263,7 @@
 					tickColor: '#d8d8d8',
 					title: {
 						style: {
-							color: '#A0A0A3'
+							color: '#888888'
 
 						}
 					}
@@ -272,7 +272,7 @@
 					gridLineColor: '#d8d8d8',
 					labels: {
 						style: {
-							color: '#E0E0E3'
+							color: '#888888'
 						}
 					},
 					lineColor: '#d8d8d8',
@@ -281,7 +281,7 @@
 					tickWidth: 1,
 					title: {
 						style: {
-							color: '#A0A0A3'
+							color: '#888888'
 						}
 					}
 				},
