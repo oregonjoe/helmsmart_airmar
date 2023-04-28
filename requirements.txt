@@ -32,7 +32,7 @@ webassets==0.8
 xlocal==0.5
 graphiteudp==0.0.2
 socketcache==0.1.0
-redis==2.9.1
+redis==2.9.1 
 rq==0.5.5
 #python-postmark==0.4.1
 APScheduler==2.0.3
